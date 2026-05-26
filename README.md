@@ -70,21 +70,21 @@ Nem todos os padrões precisam ser estudados na mesma ordem. Aqui está uma suge
 
 Estes são os padrões mais usados e com maior aplicabilidade prática em projetos do dia a dia.
 
-- Abstract Factory
-- Builder
-- Factory Method
-- Singleton
-- Adapter
-- Composite
-- Decorator
-- Facade
-- Proxy
-- Observer
-- Strategy
-- State
-- Command
-- Chain of Responsibility
-- Template Method
+1. Strategy
+2. Template Method
+3. Factory Method
+4. Abstract Factory
+5. Builder
+6. Singleton
+7. Adapter
+8. Facade
+9. Decorator
+10. Proxy
+11. Composite
+12. Observer
+13. Command
+14. Chain of Responsibility
+15. State
 
 ## Menos importantes
 
@@ -129,4 +129,22 @@ design-patterns-in-practice/
 └── docs/
     ├── diagrams/
     └── notes/
+```
+
+
+
+
+```bash
+mkdir -p design-patterns-in-practice/javascript/behavioral/{chain-of-responsibility,command,interpreter,iterator,mediator,memento,observer,state,strategy,template-method,visitor}
+
+mkdir -p design-patterns-in-practice/javascript/creational/{abstract-factory,builder,factory-method,prototype,singleton}
+
+mkdir -p design-patterns-in-practice/javascript/structural/{adapter,bridge,composite,decorator,facade,flyweight,proxy}
+
+mkdir -p design-patterns-in-practice/php/behavioral/{chain-of-responsibility,command,interpreter,iterator,mediator,memento,observer,state,strategy,template-method,visitor}
+
+mkdir -p design-patterns-in-practice/php/creational/{abstract-factory,builder,factory-method,prototype,singleton}
+
+mkdir -p design-patterns-in-practice/php/structural/{adapter,bridge,composite,decorator,facade,flyweight,proxy}
+
 ```
