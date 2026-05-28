@@ -13,6 +13,7 @@ class Frete {
       return 0;
     }
 
+
     throw new Error("Tipo inválido");
   }
 }
