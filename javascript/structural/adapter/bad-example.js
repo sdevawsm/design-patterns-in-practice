@@ -49,9 +49,18 @@ class Checkout {
      
     }
 
-    finalizar(valor) {
+    finalizar(valor, gatewayName) {
 
-       this.gateway.finalizar(valor)
+        if (gatewayName === "PayPal") {
+            this.gateway.sendPayment(valor);
+            return;
+        } 
+
+        if (gatewayName === "MercadoPago") {    
+
+            this.gateway.makePayment(valor);
+            return;
+        }
     }
 }
 
@@ -60,10 +69,10 @@ class Checkout {
 
 
 const checkout = new Checkout(new MercadoPago());
-checkout.finalizar(100.00, "MercadoPago")
+
+checkout.finalizar(100, "MercadoPago");
 
 
-const checkout = new Checkout(new PayPal());
-checkout.finalizar(100.00, "PayPal")
+const checkout2 = new Checkout(new PayPal());
 
-
+checkout2.finalizar(100, "PayPal");

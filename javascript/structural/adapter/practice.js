@@ -1,5 +1,6 @@
 //biblioteca
-class maisPDF{
+//Adaptee
+class MaisPDF{
 
     gerarPdf(nome){
         console.log(nome + " - Pdf gerado com sucesso!")
@@ -9,7 +10,8 @@ class maisPDF{
 
 
 //nova biblioteca para pdf
-class pdfGratis{
+//Adaptee
+class PdfGratis{
 
     formatarPdf(nome){
         console.log(nome + " - Pdf gerado com sucesso!")
@@ -19,7 +21,7 @@ class pdfGratis{
 
 
 //adapter
-class maisPDFAdapter{
+class MaisPDFAdapter{
     
     constructor(lib){
         this.biblioteca = lib
@@ -32,7 +34,7 @@ class maisPDFAdapter{
 
 
 //Adapter
-class pdfGratisAdapter{
+class PdfGratisAdapter{
     
     constructor(lib){
         this.biblioteca = lib
@@ -45,8 +47,8 @@ class pdfGratisAdapter{
 
 
 
-//adaptee
-class adaptee{
+//Cliente
+class Cliente{
     constructor(adapter){
         this.adapter = adapter
     }
@@ -61,15 +63,15 @@ class adaptee{
 
 //código cliente
 
-const maispdf = new maisPDFAdapter(new maisPDF);
-const pdfgratis = new pdfGratisAdapter(new pdfGratis);
+const maispdf = new MaisPDFAdapter(new MaisPDF);
+const pdfgratis = new PdfGratisAdapter(new PdfGratis);
 
 
-let pdf = new adaptee(maispdf)
+let pdf = new Cliente(maispdf)
 pdf.gerar("Predo")
 
 
-pdf =  new adaptee(pdfgratis)
+pdf =  new Cliente(pdfgratis)
 pdf.gerar("Maria Betania")
 
 
