@@ -43,3 +43,44 @@ class Pedido {
         );
     }
 }
+
+
+
+//
+class CheckoutFacade {
+
+    constructor() {
+
+        this.estoque =
+            new Estoque();
+
+        this.pedido =
+        new Pedido();
+
+        this.pagamento =
+            new Pagamento();
+
+        this.notaFiscal =
+            new NotaFiscal();
+
+        this.email =
+            new Email();
+    }
+
+    finalizarCompra() {
+
+        this.estoque.verificar();
+
+        this.pedido.enviar();
+
+        this.pagamento.processar();
+
+        this.notaFiscal.processar();
+
+        this.email.enviar();
+    }
+}
+
+
+const pagamento = new CheckoutFacade(); 
+pagamento.finalizarCompra()

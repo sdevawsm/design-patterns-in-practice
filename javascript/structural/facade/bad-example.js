@@ -69,10 +69,12 @@ class Strategy {
 //Esse é o cliente
 
 const estoque = new Estoque();
-const pagamento = new Pagamento();
-const email = new Email();
-const notaFiscal = new NotaFiscal();
 const pedido = new Pedido();
+const pagamento = new Pagamento();
+const notaFiscal = new NotaFiscal();
+const email = new Email();
+
+
 
 const strategy = new Strategy(estoque, pagamento, email, notaFiscal, pedido);
     
